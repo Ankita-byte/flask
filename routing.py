@@ -8,3 +8,9 @@ def index():
 @app.route('/home')
 def home():
     return 'Hello World!'
+
+#Add variable to URL
+
+@app.route('/user/<name>')
+def username(name):
+    return 'Hello {}'.format(name)
